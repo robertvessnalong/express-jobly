@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "minSalary": "1000",
+      "hasEquity": "true",
+      "title": "Information officer"
+    }
+  ],
+  "required": [],
+  "properties": {
+    "minSalary": {
+      "$id": "#/properties/minSalary",
+      "type": "integer",
+      "minimum": 0,
+      "title": "The minSalary schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [1000]
+    },
+    "hasEquity": {
+      "$id": "#/properties/hasEquity",
+      "type": "boolean",
+      "title": "The hasEquity schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [true]
+    },
+    "title": {
+      "$id": "#/properties/title",
+      "type": "string",
+      "minLength": 1,
+      "title": "The title schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": ["Information officer"]
+    }
+  },
+  "additionalProperties": false
+}

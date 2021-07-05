@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "title": "Information officer",
+      "salary": 200000,
+      "equity": 0,
+      "companyHandle": "watson-davis"
+    }
+  ],
+  "required": ["title", "companyHandle"],
+  "properties": {
+    "title": {
+      "$id": "#/properties/title",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50,
+      "title": "The title schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": ["Information officer"]
+    },
+    "salary": {
+      "$id": "#/properties/salary",
+      "type": "integer",
+      "minimum": 0,
+      "title": "The salary schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [200000]
+    },
+    "equity": {
+      "$id": "#/properties/equity",
+      "type": "string",
+      "title": "The equity schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [0]
+    },
+    "companyHandle": {
+      "$id": "#/properties/companyHandle",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30,
+      "title": "The companyHandle schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": ["watson-davis"]
+    }
+  },
+  "additionalProperties": false
+}
